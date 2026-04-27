@@ -1,4 +1,4 @@
-public abstract class Clinica implements Asegurable {
+public class Clinica implements Asegurable {
 
     private String nombre;
     private String direccion;
@@ -8,11 +8,11 @@ public abstract class Clinica implements Asegurable {
         this.direccion = direccion;
     }
 
-    public double calcularCostoPrima(){
-    return 5000000;
-     }
      public String obtenerNumeroPoliza(){
         return "POL-CLINICA" + nombre;
      }
+     public double calcularPrimaSeguro(){
+        return 5000000;
+     };
 
 }

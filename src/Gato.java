@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Gato extends Animal {
+public class Gato extends Animal implements Vacunable, Asegurable {
 
     private boolean esEsterilizado;
     private List<String> vacunas = new ArrayList<>();
@@ -30,4 +30,9 @@ public class Gato extends Animal {
      public int getVacunasAplicadas(){
         return  vacunas.size();
      }
+
+    @Override
+    public String obtenerNumeroPoliza() {
+        return "POL-gato" + nombre;
+    }
 }
